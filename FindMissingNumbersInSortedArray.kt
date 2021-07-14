@@ -7,9 +7,11 @@ fun main() {
 
 fun displayMissing(arr:Array<Int>){
     val lastIndex = arr.size - 1 - 1
+    var diff:Int
+    var missed:Int
     for(index in 0..lastIndex){
-        var diff = arr[index + 1] - arr[index]
-        var missed = arr[index]
+        diff = arr[index + 1] - arr[index]
+        missed = arr[index]
         while (diff > 1){
             missed++
             diff--
