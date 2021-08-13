@@ -5,7 +5,7 @@ fun main(){
     println(strReverse("abba")) //abba
 }
 
-//String reverse
+//String reverse - time complexity O(n/2)
 fun strReverse(str:String): String{
     var charArr = str.toCharArray()
     var start = 0
