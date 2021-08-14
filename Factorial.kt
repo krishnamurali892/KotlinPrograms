@@ -14,4 +14,11 @@ fun factorial(n: Int): Int{
     return fact
 }
 
+fun factorialRecursion(n: Int): Int{
+    if(n == 1){
+        return 1
+    }
+    return n * factorialRecursion(n - 1)
+}
+
 
