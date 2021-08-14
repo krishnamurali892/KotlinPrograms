@@ -4,7 +4,7 @@ fun main(){
     println(repeatedCharactersWithCount("aabbaacca"))
 }
 
-//Time complexity of O(2n), any character can be represented as ASCII int value
+//Time complexity of O(2n), any character can be represented as ASCII int value(0 - 255)
 fun repeatedCharactersWithCount(str:String?): String{
     if(str == null || str.isEmpty()){
         return ""
