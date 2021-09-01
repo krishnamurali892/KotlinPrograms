@@ -5,15 +5,21 @@ fun main(){
     println(isPrime(33))
 }
 
-fun isPrime(n: Int): Boolean{
+//check is divisible by (2..square root of number)
+fun isPrime(n:Int): Boolean {
     var isPrime = true
-    var i = 2
-    while (i <= 9){
-        if(n%i == 0 && n != i){
+    var j = 2
+    while (j * j <= n) {
+        if (n % j == 0) {
             isPrime = false
             break
         }
-        i++
+        j++
+    }
+    if (isPrime) {
+        println("prime")
+    } else {
+        println("not prime")
     }
     return isPrime
 }
