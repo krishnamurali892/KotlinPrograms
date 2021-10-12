@@ -7,6 +7,9 @@ fun main(){
 
 //with iterator -- more code so will go with recursion
 fun fibWithIterator(n: Int): Int{
+    if(n == 0 || n == 1){
+        return n
+    }
     var fib0 = 0
     var fib1 = 1
     var fibn = -1
@@ -26,6 +29,30 @@ fun fib(n: Int): Int{
         return n
     }
     return fib(n - 1) + fib(n - 2)
+}
+
+fun printFibonacciSeriesWithSum(n:Int){
+    if(n < 1){
+        return
+    }
+
+    var fib1 = 0
+    var fib2 = 1
+    var fibn = -1
+    var i = 1
+    var sum  = fib1
+
+    println(fib1)
+
+    while(i < n){
+        println(fib2)
+        sum+=fib2
+        fibn = fib1 + fib2
+        fib1 = fib2
+        fib2 = fibn
+        i++
+    }
+    println("sum of n fib numbers is: $sum")
 }
 
 
